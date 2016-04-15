@@ -118,7 +118,7 @@ fn main() {
         let signing_key = signing_key.clone();
         let atomic_count = atomic_count.clone();
         thread::spawn(move|| {
-            let name: String = format!("SD bombing {}", i);
+            let name: String = format!("Your SD Name {}", i);
             let name = XorName::new(sodiumoxide::crypto::hash::sha512::hash(&name.into_bytes()).0);
             let mut version: u64 = 0;
             let mut known_version = new_account;
